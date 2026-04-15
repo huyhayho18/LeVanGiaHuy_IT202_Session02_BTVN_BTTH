@@ -16,5 +16,6 @@ add dateEnter date;
 create table borrow_books (
 	borrowId int auto_increment primary key,
     bookId char(5) not null,
-    borrowDate datetime default(current_timestamp())
+    borrowDate datetime default(current_timestamp()),
+    foreign key(bookId) references book (bookId)
 );
